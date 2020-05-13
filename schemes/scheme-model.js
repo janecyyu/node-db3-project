@@ -33,6 +33,7 @@ function remove(id) {
 function findSteps(id) {
   return db("steps");
 }
+
 function addStep(data, id) {
   return db("steps").insert(data, "id");
 }
