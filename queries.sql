@@ -21,3 +21,9 @@ From orderDetail as o
 where o.OrderId = 10251
 
 -- Display the OrderID, Customer's Company Name and the employee's LastName for every order. All columns should be labeled clearly. Displays 16,789 records.
+SELECT id, c.CompanyName, e.LastName
+FROM [order] as o
+    JOIN Customer as c
+    on o.CustomerId = c.Id
+    JOIN Employee as e
+    on o.EmployeeId = e.Id
